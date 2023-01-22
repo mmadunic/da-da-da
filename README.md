@@ -32,9 +32,9 @@ Zadnja faza je obrana projekta - nakon završetka finalne verzije svoje aplikaci
 ## Kratki opis
 Ovdje ide opis projekta
 ## Tehnologije
-1. Frontend
-2. Backend
-3. Baza
+1. Frontend - React
+2. Backend - Express
+3. Baza -  MongoDB
 ## Popis funkcionalnosti
 1. a
 2. b
