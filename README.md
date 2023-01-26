@@ -30,12 +30,15 @@ Zadnja faza je obrana projekta - nakon završetka finalne verzije svoje aplikaci
 
 # Opis projekta
 ## Kratki opis
-Ovdje ide opis projekta
+Ideja projekta je rent-a-car aplikacija. Korisnik će biti u mogućnosti birati različita mjesta preuzimanja automobila, na izbor nekoliko automobila različite cijene, datum polaska i datum povratka te mjesto vraćanja. Pored popisa ponuđenih automobila bile bi ispisane neke bitne stavke o automobilu (npr. koliko ima vrata, koje je pogonsko gorivo...).
+
 ## Tehnologije
 1. Frontend - React
 2. Backend - Express
 3. Baza -  MongoDB
 ## Popis funkcionalnosti
-1. a
-2. b
-3. c
+1. a Prijava / Registracija korisnika
+2. b Odabir mjesta preuzimanja/ vraćanja
+3. c Odabir datuma
+4. d Rezervacija automobila
+5. e Otkazivanje rezervacije
