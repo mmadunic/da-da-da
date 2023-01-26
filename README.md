@@ -37,8 +37,8 @@ Ideja projekta je rent-a-car aplikacija. Korisnik će biti u mogućnosti birati 
 2. Backend - Express
 3. Baza -  MongoDB
 ## Popis funkcionalnosti
-1. a Prijava / Registracija korisnika
-2. b Odabir mjesta preuzimanja/ vraćanja
-3. c Odabir datuma
-4. d Rezervacija automobila
-5. e Otkazivanje rezervacije
+1.  Prijava / Registracija korisnika
+2.  Odabir mjesta preuzimanja/ vraćanja
+3.  Odabir datuma
+4.  Rezervacija automobila
+5.  Otkazivanje rezervacije
