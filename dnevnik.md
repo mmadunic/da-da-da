@@ -15,3 +15,11 @@ Pocetak | Kraj
 14:15   | 15:15
 ### Kratki opis promjena
 Održano predavanje o projektu
+
+
+## 11.04.2023.
+Pocetak | Kraj
+------- | ----
+22:00   | 0:40
+### Kratki opis promjena
+Dodana navigacijska traka i footer.
