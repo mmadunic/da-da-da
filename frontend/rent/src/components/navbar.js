@@ -8,8 +8,8 @@ function NavBar() {
             <a class="dis" href="#contact" >rentacar@gmail.com</a>
             
             <div class="topnav-right">
-                <a href="#prijava">Prijava</a>
-                <a href="#registracija">Registracija</a>
+                <a href="login.js">Prijava</a>
+                <a href="registration.js">Registracija</a>
             </div>
         </div>
     );

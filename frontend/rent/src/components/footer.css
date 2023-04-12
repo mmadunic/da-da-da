@@ -1,24 +1,20 @@
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-}
-
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
+    background-color: #333;
+    bottom: 0;
+    color: #fff;
+    padding: 20px;
+    margin-top: 10px;
 }
-  
-/* .footer-about, .footer-hours, .footer-social {
-    
-} */
-  
+
+.footer-about p{
+    text-align: justify;
+}
+
 .footer-about h3, .footer-hours h3, .footer-social h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
@@ -35,9 +31,3 @@ footer {
     gap: 5px;
    
 }
-
-.footer-social > img{
-    align-items: center;
-}
-  
-
