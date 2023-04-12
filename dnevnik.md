@@ -23,3 +23,10 @@ Pocetak | Kraj
 22:00   | 0:40
 ### Kratki opis promjena
 Dodana navigacijska traka i footer.
+
+## 12.04.2023.
+Pocetak | Kraj
+------- | ----
+11:30   | 15:00
+### Kratki opis promjena
+Dodani obrasci za prijavu i registraciju te poporavljen footer.
