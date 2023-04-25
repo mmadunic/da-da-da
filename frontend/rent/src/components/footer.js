@@ -30,6 +30,7 @@ function Footer() {
 
                 <div className="footer-address">
                     <h3>Adresa</h3>
+                    
                     <p>Ruđera Boškovića 33, 21000 Split</p>
                 </div>
                 
