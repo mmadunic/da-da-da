@@ -30,3 +30,10 @@ Pocetak | Kraj
 11:30   | 15:00
 ### Kratki opis promjena
 Dodani obrasci za prijavu i registraciju te poporavljen footer.
+
+## 25.04.2023.
+Pocetak | Kraj
+------- | ----
+20:00   | 22:30
+### Kratki opis promjena
+Dodana funkcija "Renting" u kojoj se nalaze mogućnosti biranja mjesta preuzimanja i vraćanja iznajmljenog automobila te datumi preuzimanja i vraćanja. 
