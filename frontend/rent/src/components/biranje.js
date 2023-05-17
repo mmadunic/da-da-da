@@ -1,7 +1,7 @@
 import React from 'react';
 import './biranje.css'
 
-function Renting() {
+function Choosing() {
     return (
         <div>
             <h1>Rent-a-Car Fast and Easy</h1>
@@ -38,4 +38,4 @@ function Renting() {
     );
 }
 
-export default Renting;
+export default Choosing;

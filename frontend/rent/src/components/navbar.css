@@ -1,31 +1,130 @@
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: #333;
-    color:white;
-    overflow: hidden;
+.navbar {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  align-items: center;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
+.navbar-brand {
+  font-size: 20px;
+  font-weight: bold;
+  color:white;
   text-decoration: none;
-  font-size: 17px;
+}
+.navbar-brand:hover{
+  color:#4CAF50;
 }
 
-.topnav a.dis{
-    pointer-events: none;
+.navbar-toggler {
+  border: none;
+  padding: 0;
+  background-color: transparent;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.collapse.navbar-collapse {
+  justify-content: flex-end;
 }
 
-/* Right-aligned section inside the top navigation */
-.topnav-right {
-  float: right;
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-right: 10px;
+  padding: 0;
+}
+
+
+.nav-item.active .nav-link {
+  font-weight: normal;
+}
+
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link:hover{
+  color:#4CAF50;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown .btn {
+  background-color: #f8f9fa;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dropdown .btn:hover {
+  background-color: #e9ecef;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  min-width: 160px;
+  z-index: 1;
+  padding: 8px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  color: #000;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f8f9fa;
+}
+
+.dropdown.show .dropdown-menu {
+  display: block;
+}
+
+/* Register button */
+.registration {
+  background-color: gray;
+  border-radius:2px;
+  color: #fff;
+  cursor: pointer;
+  width: 100px;
+  text-align: center;
+}
+
+/* Login button */
+.login {
+  background-color: gray;
+  border-radius:2px;
+  color: #fff;
+  cursor: pointer;
+  width: 100px;
+  text-align: center;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #4CAF50;
 }
