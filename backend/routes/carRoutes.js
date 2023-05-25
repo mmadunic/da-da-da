@@ -5,12 +5,11 @@ const Car=require('../models/car')
 
 router.get("/getallcars",async(req,res)=>{
     try {
-        const rooms=await Car.find()
+        const cars=await Car.find()
         res.send(cars)
     } catch (error) {
         return res.status(400).json({error})
     }
-
 })
 
 router.post("/getcarbyid",async(req,res)=>{

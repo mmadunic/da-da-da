@@ -7,7 +7,7 @@ require('express-async-errors')
 const authRoute=require('./routes/auth')
 const carsRoute = require('./routes/carRoutes.js')
 const usersRoute = require('./routes/userRoutes.js')
-
+const rentRoute = require('./routes/rentRoutes.js')
 const app = express();
 dotenv.config();
 
@@ -23,5 +23,6 @@ app.use(express.json())
 app.use('/api/cars',carsRoute)
 app.use('/api/users',usersRoute)
 app.use('/api/auth',authRoute)
+app.use('/api/renting',rentRoute)
 
 module.exports = app;

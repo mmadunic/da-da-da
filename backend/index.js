@@ -1,4 +1,4 @@
-const app = require('./App')  // Express aplikacija
+const app = require('./App')
 const http = require('http')
 
 const server = http.createServer(app)
