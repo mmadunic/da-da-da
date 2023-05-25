@@ -58,16 +58,13 @@ form {
     
 }
 
-.signup a {
-    text-decoration: none;
-    color: #4CAF50;
-}
-
-.signup a:hover {
-    text-decoration: underline;
-}
-
 .signup button{
     width: 80px;
     font-size: small;
+    color:#4CAF50;
 }
+
+.signup button:hover {
+    background-color: #ccc;
+}
+  

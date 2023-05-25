@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import "./login.css";
 import axios from 'axios';
 import Loader from './loader.js';
 import Error from './error.js';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 function LoginForm() {
   const [email, setEmail] = useState('');
@@ -13,17 +13,20 @@ function LoginForm() {
 
   async function login() {
     if (password !== "") {
+
       const user = {
         email,
         password,
       }
+
       console.log(user)
+
       try {
         setLoading(true)
         const result = await axios.post('http://localhost:3001/api/auth/login', user)
         setLoading(false)
         localStorage.setItem('currentUser', JSON.stringify(result))
-        // window.location.href = '/firstpage'
+        window.location.href = '/home'
       } catch (error) {
         console.log(error)
         setLoading(false)
@@ -47,7 +50,7 @@ function LoginForm() {
       {loading && (<Loader/>)}
 
       <div>
-        <h2>Log in</h2>
+        <h2>Login</h2>
         <label htmlFor="email">Email:</label>
         <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
       </div>
@@ -58,8 +61,11 @@ function LoginForm() {
       <button type="submit" onClick={login}>Log in</button>
 
       <div className="signup">
-        Don't have an account? <button>
-          <Link to='/register'>   Sign up</Link></button>
+        
+        Don't have an account? 
+          <Link to='/register'>
+            <button> Sign up </button> 
+          </Link>
       </div>
 
       {error && (<Error message='Invalid Credentionals' />)}

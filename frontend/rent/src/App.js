@@ -6,6 +6,7 @@ import Login from './components/login';
 import Registration from './components/registration';
 import Rent from './components/rent';
 import Home from './Homepage';
+import Start from './start';
 
 
 function App() {
@@ -14,9 +15,10 @@ function App() {
       <header className="App-header">
 
         <NavBar />
-         
+
         <BrowserRouter>
           <Routes>
+            <Route path='/' element={<Start />} />
             <Route path='/home' element={<Home />} />
             <Route path='/login' element={<Login />} />
             <Route path='/rent/:carid' element={<Rent />} />
