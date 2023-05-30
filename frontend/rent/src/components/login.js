@@ -1,9 +1,9 @@
-import React, { useState , useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import "./login.css";
 import axios from 'axios';
 import Loader from './loader.js';
 import Error from './error.js';
-import {Link, useNavigate} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function LoginForm() {
   const [email, setEmail] = useState('');
@@ -46,31 +46,39 @@ function LoginForm() {
   }
 
   return (
-    <form className='login1'>
-      {loading && (<Loader/>)}
+    <div className='login1'>
+      {loading && (<Loader />)}
 
-      <div>
-        <h2>Login</h2>
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+      <div className='pocetna '>
+        <div className='form'>
+          <div className='form-log'>
+            {error && (<Error message='Invalid Credentionals' />)}
+            <div className='log1'>
+              <h2>Login</h2>
+              Email:
+              <input type="text" className='form-control' placeholder='email'
+                id="username" value={email} onChange={(e) => (setEmail(e.target.value))}
+              />
+              Password:
+              <input type="password" className='form-control' placeholder='lozinka'
+                id="pass" value={password} onChange={(e) => (setPassword(e.target.value))}
+              />
+              <button className='btnS' onClick={login}>Login</button>
+
+              <div className="signin">
+                Don't have an account?
+                <Link to='/register'>
+                  <button> Sign up </button>
+                </Link>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
       </div>
-      <div>
-        <label htmlFor="password">Password:</label>
-        <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      </div>
-      <button type="submit" onClick={login}>Log in</button>
-
-      <div className="signup">
-        
-        Don't have an account? 
-          <Link to='/register'>
-            <button> Sign up </button> 
-          </Link>
-      </div>
-
-      {error && (<Error message='Invalid Credentionals' />)}
-
-    </form>
+    </div>
   );
 }
 

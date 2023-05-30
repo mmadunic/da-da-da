@@ -22,8 +22,8 @@ function RegistrationForm() {
 
       const user = {
         firstName,
-        // lastName,
-        // birthdate,
+        lastName,
+        birthdate,
         email,
         password,
         confirmPassword
@@ -34,12 +34,12 @@ function RegistrationForm() {
       try {
         setLoading(true)
         const result = await axios.post('http://localhost:3001/api/auth/register', user)
-        // setLoading(false)
-        // setSuccess(true)
+        setLoading(false)
+        setSuccess(true)
 
         setFirstName('')
-        // setLastName('')
-        // setBirthdate('')
+        setLastName('')
+        setBirthdate('')
         setEmail('')
         setPassword('')
         setConfirmPassword('')
@@ -62,33 +62,33 @@ function RegistrationForm() {
     <form className='registration-form'>
       <div>
 
-        {/* {loading && (<Loader />)}
-        {error && (<Error message='UIser exist' />)} */}
+      {loading && (<Loader />)}
+        {error && (<Error message='UIser exist' />)}
 
         <h2>Sign up</h2>
 
         <label htmlFor="first-name">First Name:</label>
-        <input type="text" id="first-name" name="first-name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+        <input type="text" id="first-name" name="first-name" placeholder="first name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
       </div>
-      {/* <div>
+      <div>
         <label htmlFor="last-name">Last Name:</label>
-        <input type="text" id="last-name" name="last-name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+        <input type="text" id="last-name" name="last-name" placeholder="last name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
       </div>
       <div>
         <label htmlFor="birthdate">Date of Birth:</label>
         <input type="date" id="birthdate" name="birthdate" value={birthdate} onChange={(e) => setBirthdate(e.target.value)} />
-      </div> */}
+      </div>
       <div>
         <label htmlFor="email">Email:</label>
-        <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <input type="email" id="email" name="email" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} />
       </div>
       <div>
         <label htmlFor="password">Password:</label>
-        <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <input type="password" id="password" name="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} />
       </div>
       <div>
         <label htmlFor="confirm-password">Confirm Password:</label>
-        <input type="password" id="confirm-password" name="confirm-password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="confirm password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
       </div>
 
       <button type="submit" onClick={register}>Register</button>
@@ -101,7 +101,6 @@ function RegistrationForm() {
       </div>
 
       {success && (<Success message='Successfully registered' />)}
-
     </form>
   )
 }

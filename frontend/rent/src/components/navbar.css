@@ -8,11 +8,7 @@
 .navbar-brand {
   font-size: 20px;
   font-weight: bold;
-  color:white;
   text-decoration: none;
-}
-.navbar-brand:hover{
-  color:#4CAF50;
 }
 
 .navbar-toggler {
@@ -61,7 +57,7 @@
 
 
 .dropdown .btn {
-  background-color: #f8f9fa;
+  background-color: #4CAF50;
   border: none;
   color: white;
   padding: 8px 12px;
@@ -78,11 +74,11 @@
   top: 100%;
   left: 0;
   display: none;
-  min-width: 160px;
   z-index: 1;
   padding: 8px 0;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  min-width: fit-content;
 }
 
 .dropdown-menu a {
@@ -99,6 +95,9 @@
 .dropdown.show .dropdown-menu {
   display: block;
 }
+
+
+
 
 /* Register button */
 .registration {
@@ -128,3 +127,5 @@ a{
 a:hover{
   color: #4CAF50;
 }
+
+

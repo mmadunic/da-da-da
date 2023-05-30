@@ -5,7 +5,6 @@ function About() {
     return (
             <div class="content">
                 <div class="about">
-                    <h3>O nama</h3>
                     <p>Rent-a-Car Fast and Easy je tvrtka osnovana 2018. godine. Fokusira se na pružanje visoko kvalitetne usluge iznajmljivanja vozila svojim klijentima.
                         Ova tvrtka ima za cilj svojim klijentima pružiti najbolje iskustvo iznajmljivanja automobila, sa modernim vozilima,
                         fleksibilnim uslovima iznajmljivanja i vrhunskom korisničkom podrškom. Svojim klijentima daje na raspolaganje širok izbor vozila,

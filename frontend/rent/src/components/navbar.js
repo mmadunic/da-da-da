@@ -11,7 +11,7 @@ function NavBar() {
     return (
         <div>
             <nav className="navbar navbar-expand-lg">
-                <a className="navbar-brand" href="/">
+                <a className="navbar-brand" href='/'>
                     Fast & Easy
                 </a>
                 <button
@@ -37,7 +37,7 @@ function NavBar() {
                         {user ? (<>
                             <div class="dropdown">
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {user.data.name}
+                                    {user.data.firstName}
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="/profile">Profile</a>
@@ -47,11 +47,11 @@ function NavBar() {
                         </>) : (
                             <>
                                 <li className="nav-item">
-                                        <a className='login' href="/login">Login</a>
+                                    <a className='login' href="/login">Login</a>
                                 </li>
 
                                 <li className="nav-item">
-                                        <a className='registration' href="/register">Registration</a>
+                                    <a className='registration' href="/register">Registration</a>
                                 </li>
                             </>
                         )}

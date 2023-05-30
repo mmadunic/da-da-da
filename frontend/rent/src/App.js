@@ -7,6 +7,7 @@ import Registration from './components/registration';
 import Rent from './components/rent';
 import Home from './Homepage';
 import Start from './start';
+import Profile from './components/profile';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path='/rent/:carid' element={<Rent />} />
             <Route path='/register' element={<Registration />} />
             <Route path='/about' element={<About />} />
+            <Route path='/profile' element={<Profile />} />
           </Routes>
         </BrowserRouter>
 
