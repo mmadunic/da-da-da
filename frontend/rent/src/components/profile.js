@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios";
 import { Tabs } from 'antd';
-import Loader from './loader.js';
-import Swal from 'sweetalert2'
-import { Tag } from 'antd';
+import './profile.css'
 
 const { TabPane } = Tabs
-
 function Profile() {
+ 
     const user = JSON.parse(localStorage.getItem('currentUser'))
+    const birthdate = new Date(user.data.birthdate);
+    const birthdateString = birthdate.toLocaleDateString();
+
     useEffect(() => {
         if (!user) {
             window.location.href = '/login'
@@ -19,18 +20,18 @@ function Profile() {
             <Tabs defaultActiveKey="1">
                 <TabPane tab="Profile" key="1">
                     <div className='ls'>
-                        <h2>My profile</h2>
+                        <h3><b>MY PROFILE</b></h3>
                         <hr />
-                        <h2><b>Name:</b> {user.data.firstName}</h2>
-                        <h2><b>Surname:</b> {user.data.lastName}</h2>
-                        <h2><b>Date of birth:</b> {user.data.birthdate}</h2>
-                        <h2><b>Email:</b> {user.data.email}</h2>
+                        <h4><b>Name:</b> {user.data.firstName}</h4>
+                        <h4><b>Surname:</b> {user.data.lastName}</h4>
+                        <h4><b>Date of birth:</b> {birthdateString}</h4>
+                        <h4><b>Email:</b> {user.data.email}</h4>
                         
                     </div>
 
                 </TabPane>
-                <TabPane tab="Rentings" key="2">
-                    {/* <MyRent /> */}
+                <TabPane tab="Rented cars" key="2">
+                    {/* <MyRent />*/ }
                 </TabPane>
             </Tabs>
         </div>
@@ -39,6 +40,30 @@ function Profile() {
 
 export default Profile;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import Loader from './loader.js';
+// import Swal from 'sweetalert2'
+// import { Tag } from 'antd';
 
 // export function MyRent() {
 //     const user = JSON.parse(localStorage.getItem('currentUser'))

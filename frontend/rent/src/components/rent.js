@@ -5,7 +5,7 @@ import Loader from './loader.js';
 import Error from './error.js';
 import moment from "moment";
 import Swal from 'sweetalert2';
-import StripeCheckout from 'react-stripe-checkout';
+// import StripeCheckout from 'react-stripe-checkout';
 
 function Rent() {
   const user = JSON.parse(localStorage.getItem('currentUser'))
@@ -69,50 +69,50 @@ function Rent() {
 
 
 
-  return (
-    <div className='m-5'>
-      {loading ? (<Loader />) : car ? (
-        <div>
-          <div className='row justify-content-center mt-5 ls'>
-            <div className='col-md-5' id="1">
-              <h1>{car.name}</h1>
-              <img src={car.image[0]} className='' />
-            </div>
-            <div className='col-md-5 mt-3' id="2">
-              <div style={{ textAlign: 'right' }}>
-                <i><h1>Rent Details</h1></i>
-                <hr />
-                <b>
-                  <p>Name:  {user.data.name}</p>
-                  <p>From Date: {fromDate}</p>
-                  <p>To Date: {toDate}</p>
-                  {/* <p>Max Count:{car.count}</p> */}
-                </b>
-              </div>
+  // return (
+  //   <div className='m-5'>
+  //     {loading ? (<Loader />) : car ? (
+  //       <div>
+  //         <div className='row justify-content-center mt-5 ls'>
+  //           <div className='col-md-5' id="1">
+  //             <h1>{car.name}</h1>
+  //             <img src={car.image[0]} className='' />
+  //           </div>
+  //           <div className='col-md-5 mt-3' id="2">
+  //             <div style={{ textAlign: 'right' }}>
+  //               <i><h1>Rent Details</h1></i>
+  //               <hr />
+  //               <b>
+  //                 <p>Name:  {user.data.name}</p>
+  //                 <p>From Date: {fromDate}</p>
+  //                 <p>To Date: {toDate}</p>
+  //                 {/* <p>Max Count:{car.count}</p> */}
+  //               </b>
+  //             </div>
 
-              <div style={{ textAlign: 'right' }}>
-                <i><h1>Amount</h1></i>
-                <hr />
-                <p>Total days:  {totalDays}</p>
-                <p>Rent per day:  {car.price}</p>
-                <b>Total Amount: {totalAmount}</b>
-              </div>
+  //             <div style={{ textAlign: 'right' }}>
+  //               <i><h1>Amount</h1></i>
+  //               <hr />
+  //               <p>Total days:  {totalDays}</p>
+  //               <p>Rent per day:  {car.price}</p>
+  //               <b>Total Amount: {totalAmount}</b>
+  //             </div>
 
-              <div style={{ float: 'right' }}>
-                <StripeCheckout
-                  token={onToken}
-                  // stripeKey="pk_test_51N3vFzBFWkHUqSlGJ0IroYTABBpaEKgwolqfc5iM7QvVRHeoQgIiXpelyWBcg8cPctQf2mtwJNBvjxr7GB0Do07Y00lSZYZIpE"
-                >
-                  <button className='btn btn-primary' >Pay Now </button>
-                </StripeCheckout>
-              </div>
-            </div>
-          </div>
+  //             <div style={{ float: 'right' }}>
+  //               <StripeCheckout
+  //                 token={onToken}
+  //                 // stripeKey="pk_test_51N3vFzBFWkHUqSlGJ0IroYTABBpaEKgwolqfc5iM7QvVRHeoQgIiXpelyWBcg8cPctQf2mtwJNBvjxr7GB0Do07Y00lSZYZIpE"
+  //               >
+  //                 <button className='btn btn-primary' >Pay Now </button>
+  //               </StripeCheckout>
+  //             </div>
+  //           </div>
+  //         </div>
 
-        </div>
-      ) : (<Error />)}
-    </div>
-  )
+  //       </div>
+  //     ) : (<Error />)}
+  //   </div>
+  // )
 
 }
 

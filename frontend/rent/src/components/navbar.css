@@ -56,11 +56,12 @@
 }
 
 
-.dropdown .btn {
+.dropdown button {
   background-color: #4CAF50;
   border: none;
   color: white;
   padding: 8px 12px;
+  margin: 10px;
   font-size: 14px;
   cursor: pointer;
 }
@@ -99,20 +100,18 @@
 
 
 
-/* Register button */
+/* Register */
 .registration {
-  background-color: gray;
-  border-radius:2px;
   color: #fff;
   cursor: pointer;
   width: 100px;
   text-align: center;
+  text-decoration: none;
+  margin-left: 9px;
 }
 
-/* Login button */
+/* Login  */
 .login {
-  background-color: gray;
-  border-radius:2px;
   color: #fff;
   cursor: pointer;
   width: 100px;
@@ -127,5 +126,4 @@ a{
 a:hover{
   color: #4CAF50;
 }
-
 

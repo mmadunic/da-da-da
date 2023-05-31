@@ -1,5 +1,6 @@
 import React from 'react';
 import './biranje.css'
+import { Link } from 'react-router-dom';
 
 function Choosing() {
     return (
@@ -32,7 +33,16 @@ function Choosing() {
                     <input type="date" id="return-date" />
                 </label>
 
-                <button type="submit">Pretraži</button>
+                {/* <button type="submit">
+                    <Link>
+                    Pretraži
+                    </Link>
+                    </button> */}
+                <div className="search">
+                <Link to='/rent/:carid'>
+                  <button> Pretraži </button>
+                </Link>
+              </div>
             </form>
         </div>
     );

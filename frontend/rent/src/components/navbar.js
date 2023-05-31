@@ -41,7 +41,7 @@ function NavBar() {
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="/profile">Profile</a>
-                                    <a class="dropdown-item" href="#" onClick={logout}>Log Out</a>
+                                    <a class="dropdown-item" onClick={logout}>Log Out</a>
                                 </div>
                             </div>
                         </>) : (
