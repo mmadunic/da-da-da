@@ -29,10 +29,6 @@ const rentingShema=mongoose.Schema({
         type:Number,
         require:true
     },
-    transactionId:{
-        type:String,
-        require:true
-    },
     status:{
         type:String,
         require:true,

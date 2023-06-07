@@ -2,8 +2,8 @@ const express = require("express")
 const router = express.Router();
 const Rent = require("../models/rent")
 const Car = require("../models/car")
-// const { v4: uuidv4 } = require('uuid');
-// const stripe = require('stripe')('sk_test_51N3vFzBFWkHUqSlGcPeH1lv1BhiW5EvWAC3sQkLYFGMc2XdYv1m4plDzKU426T4X8gV7UcyNXT7qH1ITccchCeil00o3BTiKh6')
+const { v4: uuidv4 } = require('uuid');
+const stripe = require('stripe')('sk_test_51N3vFzBFWkHUqSlGcPeH1lv1BhiW5EvWAC3sQkLYFGMc2XdYv1m4plDzKU426T4X8gV7UcyNXT7qH1ITccchCeil00o3BTiKh6')
 
 router.post('/rentcar', async (req, res) => {
     const {
@@ -43,14 +43,14 @@ router.post('/rentcar', async (req, res) => {
                     toDate,
                     totalAmount,
                     totalDays,
-                    transactionId: '1234'
+                    transactionid: '1234'
 
                 })
 
                 const renting = await newRenting.save()
                 const temp = await Car.findOne({ _id: car._id })
 
-                temp.currentRenting.push({
+                temp.currentrenting.push({
                     rentingid: renting._id,
                     fromDate: fromDate,
                     toDate: toDate,
@@ -66,7 +66,7 @@ router.post('/rentcar', async (req, res) => {
                 return res.status(400).json({ message: "Error: " + err.message })
             }
         }
-        res.send('Successfully paid ,You rented a car')
+        res.send('Payment Succesful,You booked room')
 
     } catch (err) {
         console.error(err);
@@ -87,15 +87,16 @@ router.post("/getuserrenting", async (req, res) => {
     }
 })
 
+
 router.post("/cancelrenting", async (req, res) => {
     const { rentingid, carid } = req.body
 
     try {
-        const rentingitem = await Rent.findOne({ _id: rentingid })
+        const rentingItem = await Rent.findOne({ _id: rentingid })
 
-        rentingitem.status = 'cancelled'
+        rentingItem.status = 'cancelled'
 
-        await rentingitem.save()
+        await rentingItem.save()
         const car = await Car.findOne({ _id: carid })
 
         const rentings = car.currentRenting
@@ -113,15 +114,15 @@ router.post("/cancelrenting", async (req, res) => {
     }
 })
 
-router.get("/getallrentings", async (req, res) => {
-    try {
-        const renting = await renting.find()
-        res.send(renting)
-    } catch (err) {
-        console.error(err);
-        return res.status(400).json({ message: "Error: " + err.message })
-    }
+// router.get("/getallrentings", async (req, res) => {
+//     try {
+//         const renting = await Rent.find()
+//         res.send(renting)
+//     } catch (err) {
+//         console.error(err);
+//         return res.status(400).json({ message: "Error: " + err.message })
+//     }
 
-})
+// })
 
 module.exports = router;
