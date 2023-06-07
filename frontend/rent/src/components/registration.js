@@ -55,21 +55,22 @@ function RegistrationForm() {
       setPassword('')
       setConfirmPassword('')
     }
-    
+
   }
 
   return (
     <form className='registration-form'>
-      <div>
-
       {loading && (<Loader />)}
-        {error && (<Error message='UIser exist' />)}
+      {error && (<Error message='User exist' />)}
+        
+      <div>
+        {success && (<Success message='Successfully registered' />)}
 
         <h2>Sign up</h2>
 
         <label htmlFor="first-name">First Name:</label>
         <input type="text" id="first-name" name="first-name" placeholder="first name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-      </div>
+      
       <div>
         <label htmlFor="last-name">Last Name:</label>
         <input type="text" id="last-name" name="last-name" placeholder="last name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
@@ -94,13 +95,14 @@ function RegistrationForm() {
       <button type="submit" onClick={register}>Register</button>
 
       <div className="signin">
-        Already have an account? 
+        Already have an account?
         <Link to='/login'>
-            <button> Sign in </button> 
-          </Link>
+          <button> Sign in </button>
+        </Link>
       </div>
 
-      {success && (<Success message='Successfully registered' />)}
+      </div>
+      
     </form>
   )
 }
